@@ -1,0 +1,30 @@
+<!--pages/my/cash/cash.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view  class='cash'>
+      <image src='/images/my/weixin.png'></image>
+      <text>微信余额</text>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}"/>
+        </label>
+      </radio-group>
+    </view>
+    <!-- <view class='bindweixin'>请点击绑定微信</view> -->
+    <view class='cashmoney'>
+      <view>提现金额</view>
+      <view class='money'>
+        <text>￥</text>
+        <input type='digit' name='cash' value='' placeholder='请输入提醒金额'></input>
+      </view>
+      <view class='keyong'>可用余额{{preview.money}}元</view>
+    </view>
+    <view class='prompt'>
+      <image src='/images/my/prompt.png'></image>
+      提现完成后，如48小时内未到账，及时联系<text>在线客服</text>
+    </view>
+    <view class='submit'>
+      <button form-type='submit' disabled='{{disabled}}'>确认提现</button>
+    </view>
+  </view>
+</form>

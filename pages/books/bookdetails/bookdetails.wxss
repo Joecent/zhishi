@@ -1,0 +1,407 @@
+/* pages/books/bookdetails/bookdetails.wxss */
+swiper{
+  width: 100%;
+  height: 300px;
+}
+swiper image{
+  width:65%;
+  height: 99%;
+  display:block;
+  margin:0 auto;
+  border: 1px solid #eeeeee;
+  box-shadow: 1px 1px 15px #eeeeee;
+  padding: 0 60rpx;
+  border-top: none;
+}
+.details_title{
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.details_introduce{
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+  border: 1px solid #eeeeee;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  position: relative;
+}
+.details_introduce .details_price{
+  color: #999999;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.details_introduce .details_price .init_price{
+  color: #999999;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  text-decoration:line-through;
+}
+.details_introduce .details_price .real_price{
+  margin-bottom: 10rpx;
+  font-size:38rpx;
+  color:#ed7a50;
+  margin-right: 20rpx;
+}
+.details_introduce .details_press{
+  color: #a2b3ce;
+  font-size: 30rpx;
+}
+.details_introduce .details_num{
+  color: #bfbfbf;
+  font-size: 30rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 0;
+}
+.details_share{
+  width: 100%;
+  height: 100rpx;
+  line-height: 130rpx;
+  position: relative;
+}
+.details_share text{
+  float: left;
+  font-size: 36rpx;
+  color:#a2b3ce;
+}
+.details_share image{
+  width: 35rpx;
+  height: 20rpx;
+  display: block;
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+}
+.share_new{
+  width: 100%;
+  height: auto;
+  padding: 0 0;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 30rpx;
+  margin-top: 10rpx;
+}
+.share_new .share_name{
+  width: 70%;
+  height: auto;
+  float: left;
+  position: relative;
+}
+.share_new .line{
+  width: 1px;
+  height: 60rpx;
+  background-color: #eeeeee;
+  float: left;
+  margin-top: 15rpx;
+}
+.share_new .share_name .name{
+  width: auto;
+  font-size: 36rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  float: left;
+  color: #484848;
+  margin-bottom: 0rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-right: 20rpx;
+}
+.share_new .share_name .school{
+  width: auto;
+  font-size: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+  color: #484848;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-top: 5rpx;
+}
+.share_new .share_name .description{
+  width: 100%;
+  font-size: 30rpx;
+  float: left;
+  color: #5c5c5c;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-top: 15rpx;
+}
+.share_new .share_portrait{
+  width: 29%;
+  height: 90rpx;
+  float: left;
+  position: relative;
+}
+.share_new .share_portrait text{
+  font-size: 36rpx;
+  color:#ed7a50;
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+}
+.share_new .share_portrait image{
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  float: right;
+  margin-top: 0rpx;
+  border-radius: 60rpx;
+}
+.bookintroduction{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 0;
+  padding: 40rpx 0;
+  font-size: 36rpx;
+  position: relative;
+  padding-bottom: 70rpx;
+}
+.bookintroduction .introduction_title{
+  width: 100%;
+  height: auto;
+  margin-bottom: 25rpx;
+  color:#a2b3ce;
+}
+.bookintroduction .introduction_details{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  position: relative;
+  line-height: 60rpx;
+  color: #5c5c5c;
+}
+.bookintroduction .introductionmore{
+  -webkit-line-clamp: 100;
+}
+.bookintroduction .introduction_more{
+  position: absolute;
+  bottom: 15rpx;
+  right: 45rpx;
+  background-color: #fff;
+  color: #a2b3ce;
+  font-size: 30rpx;
+}
+.bookintroduction .morenone{
+  display: none;
+}
+.down{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  position: absolute;
+  bottom: 12rpx;
+  right: 0;
+}
+.bookintroduction .introduction_details .introduction_more text{
+  color: #484848;
+}
+.bookintroduction .comment{
+  height: auto;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+}
+.bookintroduction .introduction_evaluate{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.bookintroduction .introduction_evaluate image{
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+  float: left;
+  border-radius: 60rpx;
+  margin-top: 6rpx;
+}
+.bookintroduction .introduction_evaluate text{
+  width: 80%;
+  display: block;
+  float: left;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  margin-top: 0;
+}
+.evaluate{
+  width: 100%;
+  height: auto;
+  color: #a2b3ce;
+  font-size: 30rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+.evaluate text{
+  float: left;
+}
+.evaluate .evaluate_num{
+  float: right;
+}
+.classification{
+  width: 100%;
+  height: auto;
+  margin-top: 80rpx;
+  margin-bottom: 120rpx;
+}
+.classification .title{ 
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.classification .title .title_name{
+  width: 100%;
+  font-size: 36rpx;
+  color:#a2b3ce;
+  float: left;
+  text-align: center;
+}
+.classification .outside{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.outside .product{
+  width: 100%;
+  padding: 50rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+}
+.outside .product image{
+  width: 138rpx;
+  height: 184rpx;
+  display: block;
+  float: left;
+}
+.outside .book_det{
+  float: left;
+  width: 76%;
+  margin-left: 20rpx;
+  position: relative;
+}
+@media screen and (max-width: 320px) {
+  .outside .book_det{
+    float: left;
+    width: 72%;
+    margin-left: 20rpx;
+    position: relative;
+  }
+}
+.outside .book_det .book_name{
+  font-size: 32rpx;
+  color: #484848;
+  margin-bottom: 15rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.outside .book_det .book_introduce{
+  font-size: 28rpx;
+  height: 80rpx;
+  color: #999999;
+  margin-bottom: 15rpx;
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.outside .book_det .book_press{
+  width: 380rpx;
+  height: auto;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.book_press text{
+  font-size:28rpx;
+  margin-right:5rpx;
+  float:left;
+}
+.book_press .press_name{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color: #a2b3ce;
+}
+.book_press .press_address{
+  color: #a2b3ce;
+}
+.press_price{
+  color: #ed7a50;
+  font-size: 28rpx;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.book_press .press_price_y{
+  color: #c4c4c4;
+  text-decoration:line-through; 
+}
+.join_buy{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid #eeeeee;
+}
+.join_buy .details_index{
+  width: 14.5%;
+  height: 100rpx;
+  text-align: center;
+  float: left;
+}
+.join_buy .details_index image{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  float: left;
+  margin-left: 32%;
+}
+.join_buy .details_index text{
+  width: 100%;
+  text-align: center;
+  font-size: 20rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+.join_buy .details_join{
+  width: 45%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #ed7a50;
+  color: #fff;
+  font-size: 30rpx;
+  float: right;
+}
+.join_buy .details_buy{
+  width: 25%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #da532c;
+  color: #fff;
+  font-size: 30rpx;
+  float: right;
+}

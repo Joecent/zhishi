@@ -1,0 +1,17 @@
+<!--pages/books/evaluate/evaluate.wxml-->
+<view class="container">
+  <!--评价-->
+  <view class='bookintroduction'>
+    <view class='introduction_title'>{{inquirylist.length}}条评价</view>
+    <view wx:for="{{inquirylist}}">
+      <view class='introduction_evaluate'>
+        <image src='{{item.avatar_url}}'></image>
+        <text>{{item.name}}</text>
+        <text>{{item.create_date}}</text>
+      </view>
+      <view class='introduction_details comment'>{{item.comment}}</view>
+    </view>
+    <view hidden='{{none}}' class='none'>没有搜到您要的书籍</view>
+    <view hidden="{{loadall}}" class="none">已加载全部</view>
+  </view>
+</view>

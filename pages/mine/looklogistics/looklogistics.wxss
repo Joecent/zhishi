@@ -1,0 +1,34 @@
+/* pages/mine/looklogistics/looklogistics.wxss */
+.container{
+  width: 100%;
+  background-color: #f9f9f9;
+  padding-bottom: 50rpx;
+}
+.logistics{
+  width: 90%;
+  padding: 0 5%;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+.logistics text{
+  width: 80%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.logistics .dian{
+  margin-right: 20rpx;
+  color: #ff7f50;
+  margin-left: 0;
+}
+.logistics .time{
+  position:absolute;
+  bottom:0;
+  left:70rpx;
+  height:30rpx;
+  line-height:30rpx;
+  font-size: 26rpx;
+  color: #ff7f50;
+}

@@ -1,0 +1,222 @@
+/* pages/release/details/details.wxss */
+page{
+  background-color: #f9f9f9;
+}
+.container{
+  width: 100%;
+}
+.product{
+  width: 90%;
+  padding: 30rpx 5%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.product image{
+  width: 138rpx;
+  height: 184rpx;
+  display: block;
+  float: left;
+}
+.book_det{
+  float: left;
+  width: 72%;
+  margin-left: 20rpx;
+}
+.book_det .book_name{
+  font-size: 26rpx;
+  color: #646464;
+  margin-bottom: 10rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.book_det .book_title{
+  font-size: 32rpx;
+  color: #484848;
+}
+.book_det .book_price{
+  font-size: 32rpx;
+  color: #878787;
+  text-decoration:line-through;
+}
+.parameter{
+  width: 90%;
+  padding: 0 5%;
+  height: auto;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding-bottom: 0;
+}
+.parameter view{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #484848;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+.parameter view label{
+  width: 20%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  font-size: 32rpx;
+}
+.parameter view input{
+  width: 80%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  font-size: 28rpx;
+}
+.parameter .gift{
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #ed7a50;
+  border: 1px solid #ed7a50;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  text-align: center;
+  position: absolute;
+  top: 25rpx;
+  right: 0;
+}
+.parameter .gifttuijian{
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #646464;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  text-align: center;
+  position: absolute;
+  top: 25rpx;
+  right: 355rpx;
+}
+@media screen and (max-width: 320px) {
+  .parameter .gifttuijian{
+    width: 100rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #646464;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    text-align: center;
+    position: absolute;
+    top: 25rpx;
+    right: 300rpx;
+  }
+}
+.mxbq{
+  width: 90%;
+  padding: 0 5%;
+  height: auto;
+  margin-top: 0;
+  background-color: #fff;
+  padding-bottom: 120rpx;
+}
+.mxbq view{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #484848;
+  border-bottom: 1px solid #eeeeee;
+}
+.mxbq view label{
+  width: 100%;
+  height: auto;
+  line-height: 100rpx;
+  float: left;
+  font-size: 32rpx;
+  position: relative;
+  margin-top:10rpx;
+}
+.mxbq view label .cancelcause{
+  width: 70%;
+  height: auto;
+  line-height: 40rpx;
+  margin-bottom:0;
+  border-top:none;
+  padding-top:0;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  font-size: 26rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.mxbq view label .xiayibu{
+  width:40rpx;
+  height:40rpx;
+  display:block;
+  position:absolute;
+  top:30rpx;
+  right:0;
+}
+.mxbq view label view{
+  width:100%;
+  height:auto;
+  float:right;
+  border-bottom:none;
+  margin-bottom:20rpx;
+  border-top:1px solid #eeeeee;
+  padding-top:20rpx;
+}
+.mxbq view label text{
+  width: 23%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #646464;
+  display: block;
+  float: left;
+  padding: 0;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  margin: 20rpx 1%;
+  background-color: #f3f2f2;
+}
+.mxbq view input{
+  width: 80%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: right;
+  font-size: 28rpx;
+}
+.fqqrms{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+.fqqrms .fq{
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  background-color: #eeeeee;
+  color: #575656;
+}
+.fqqrms .qrms{
+  width: 70%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: 30rpx;
+}
+.mxbq view label .active-tag{
+  background-color: #ff7f50;
+  color: #fff;
+}

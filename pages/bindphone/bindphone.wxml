@@ -1,0 +1,21 @@
+<!--pages/bindphone/bindphone.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <image src='/images/my/login.png'></image>
+    <view>
+      <input type='number' name='phone' value='{{tel}}' placeholder='请输入手机号' bindinput='bindtel'></input>
+    </view>
+    <view>
+      <input type='number' name='sendcode' placeholder='请输入验证码'></input>
+      <button class="{{selected1?'code':'hidden'}}" bindtap="bindphone">获取验证码</button>
+      <button class="count {{selected?'code':'hidden'}}" bindtap="countdown">已发送({{second}}s)</button>
+    </view>
+    <view>
+      <input type='password' name='password' value='{{password}}' placeholder='请输入6-32位数字、字母组合密码' bindinput='bindpassword'></input>
+    </view>
+    <view>
+      <button form-type='submit'>注册</button>
+    </view>
+    <view class='login' bindtap='bindlogin'>已有账户？立即登录</view>
+  </view>
+</form>

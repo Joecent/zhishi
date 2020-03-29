@@ -1,0 +1,72 @@
+<!--pages/my/personal/personal.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='container'>
+    <view class='editdata'>
+      <text class='name'>个人信息</text>
+      <image src='{{avatarUrl}}'></image>
+    </view>
+    <view class='editnews'>
+      <view class='edittitle'>昵称</view>
+      <view class='editinput'>
+        <input type='text' name='name' value="{{urlname}}" wx:if="{{item.name !== ''}}"></input>
+        <input type='text' name='name' value="{{name}}" wx:else></input>
+         <image src='/images/my/cha.png' bindtap='binddeletename'></image> 
+      </view>
+    </view>
+    <view class='editnews'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          {{item.value}} <radio value="{{item.name}}" checked="{{item.checked}}"/>
+        </label>
+      </radio-group>
+    </view>
+    <!-- <view class='editnews'>
+      <view class='edittitle'>电话</view>
+      <view class='editinput'>
+        <input type='text' name='phone' value='{{phone}}'></input>
+        <image src='/images/my/cha.png' bindtap='binddeletephone'></image>
+      </view>
+    </view> -->
+    <view class='editnews' hidden='{{student}}' bindtap='bindschoolname'>
+      <view class='edittitle'>选择学校</view>
+      <view class='editinput'>
+        <input type='text' name='school' value='{{school}}' placeholder='请选择学校' wx:if='{{school !== ""}}' disabled='true'></input>
+        <input type='text' name='school' value='{{university}}' placeholder='请选择学校' wx:else disabled='true'></input>
+        <image src='/images/my/one.png' class='tiao'></image>
+      </view>
+    </view>
+    <!-- <view class='editnews' hidden='{{student}}'>
+      <view class='edittitle'>学院（专业）</view>
+      <view class='editinput'>
+        <input type='text' name='college' value='{{colleage}}' placeholder='选填'></input>
+         <image src='/images/my/cha.png' bindtap='binddeletecollege'></image> 
+      </view>
+    </view> -->
+    <view class='editnews' hidden='{{nostudent}}'>
+      <view class='edittitle'>个性签名</view>
+      <view class='editinput'>
+        <input type='text' name='tags' value='{{impression}}' placeholder='一句话描述自己'></input>
+         <image src='/images/my/cha.png' bindtap='binddeletetags'></image> 
+      </view>
+    </view>
+    <!-- <view class='editnews'>
+      <view class='edittitle'>自我介绍</view>
+      <view class='editinput'>
+        <textarea placeholder='选填' name='introduction' value='{{item.introduction}}'></textarea>
+      </view>
+    </view> -->
+    <view class='editnews' bindtap='bindeditaddree'>
+      <view class='edittitle'>默认地址</view>
+      <view class='editinput'>
+        <input type='text' disabled='true' placeholder='买书或卖书时必填' wx:if='{{address == ""}}'></input>
+        <input type='text' disabled='true' placeholder='{{address.addr}}{{address.detail}}' wx:else></input>
+        <!-- <input type='text' value='{{address.detail}}' disabled='true' placeholder='买书或卖书时必填'></input> -->
+        <image src='/images/my/one.png' class='tiao'></image>
+      </view>
+    </view>
+     <view class='addnewaddress_fff'></view> 
+    <view class='addnewaddress'>
+      <button form-type='submit'>保存</button>
+    </view>
+  </view>
+</form>

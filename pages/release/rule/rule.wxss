@@ -1,0 +1,62 @@
+/* pages/release/rule/rule.wxss */
+.editnews{
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.editnews .milesfreeship{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+}
+.editnews .milesfreeship text{
+  float: left;
+}
+.editnews .milesfreeship input{
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  float: left;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+}
+.radio-group .radio{
+  font-size: 30rpx;
+}
+radio{
+  transform:scale(.8);
+}
+.fqqrms{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+.fqqrms .fq{
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  background-color: #eeeeee;
+  color: #575656;
+}
+.fqqrms .qrms{
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: 30rpx;
+}

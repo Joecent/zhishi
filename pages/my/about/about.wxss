@@ -1,0 +1,13 @@
+/* pages/my/about/about.wxss */
+.abouttitle{
+  width: 100%;
+  font-size: 32rpx;
+  margin: 10rpx 0;
+  font-weight: bold;
+}
+.aboutdetails{
+  width: 100%;
+  font-size: 30rpx;
+  margin: 10rpx 0;
+  line-height: 50rpx;
+}

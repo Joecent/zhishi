@@ -1,0 +1,136 @@
+<!--pages/books/category/category.wxml-->
+<view class="container">
+  <!--搜索-->
+  <view class='search' bindtap='bindsearch'>
+    <image src='/images/public/search.png'></image>
+    <input type='' placeholder='请输入书籍名称'></input>
+  </view>
+  <!--课外书籍-->
+  <view class='classification'>
+    <view class='title'>
+      <view class='title_name'>课外书籍</view>
+    </view>
+    <view class='icon'>
+      <view>
+        <image src='/images/category/arts.png'></image>
+      </view>
+      <view>
+        <image src='/images/category/physical.png'></image>
+      </view>
+      <view>
+        <image src='/images/category/chemical.png'></image>
+      </view>
+      <view>
+        <image src='/images/category/astronautics.png'></image>
+      </view>
+      <view>
+        <image src='/images/category/building.png'></image>
+      </view>
+      <view class='line'></view>
+    </view>
+  </view>
+  <!--专业教材-->
+  <view class='classification'>
+    <view class='title'>
+      <view class='title_name'>专业教材</view>
+    </view>
+    <view class='icon'>
+      <view bindtap='bindmathematics'>
+        <image src='/images/category/mathematics.png'></image>
+        <text>数学</text>
+      </view>
+      <view>
+        <image src='/images/category/english.png'></image>
+        <text>英语</text>
+      </view>
+      <view>
+        <image src='/images/category/thought.png'></image>
+        <text>思想</text>
+      </view>
+      <view>
+        <image src='/images/category/pubmed.png'></image>
+        <text>考研</text>
+      </view>
+      <view>
+        <image src='/images/category/mechanics.png'></image>
+        <text>机械</text>
+      </view>
+      <view class='line'></view>
+      <view>
+        <image src='/images/category/information.png'></image>
+        <text>信息</text>
+      </view>
+      <view>
+        <image src='/images/category/music.png'></image>
+        <text>音乐</text>
+      </view>
+      <view>
+        <image src='/images/category/literature.png'></image>
+        <text>文学</text>
+      </view>
+      <view>
+        <image src='/images/category/medicalscience.png'></image>
+        <text>医学</text>
+      </view>
+      <view>
+        <image src='/images/category/management.png'></image>
+        <text>经管</text>
+      </view>
+      <view class='line'></view>
+      <view>
+        <image src='/images/category/electronics.png'></image>
+        <text>电子</text>
+      </view>
+      <view>
+        <image src='/images/category/biology.png'></image>
+        <text>生物</text>
+      </view>
+      <view>
+        <image src='/images/category/ships.png'></image>
+        <text>船舶</text>
+      </view>
+      <view>
+        <image src='/images/category/humanity.png'></image>
+        <text>人文</text>
+      </view>
+      <view>
+        <image src='/images/category/media.png'></image>
+        <text>传媒</text>
+      </view>
+      <view class='line'></view>
+      <view>
+        <image src='/images/category/finearts.png'></image>
+        <text>美术</text>
+      </view>
+      <view>
+        <image src='/images/category/physics.png'></image>
+        <text>物理</text>
+      </view>
+      <view>
+        <image src='/images/category/chemistry.png'></image>
+        <text>化学</text>
+      </view>
+      <view>
+        <image src='/images/category/spaceflight.png'></image>
+        <text>航天</text>
+      </view>
+      <view>
+        <image src='/images/category/architecture.png'></image>
+        <text>建筑</text>
+      </view>
+      <view class='line'></view>
+      <view>
+        <image src='/images/category/gardens.png'></image>
+        <text>园林</text>
+      </view>
+      <view>
+        <image src='/images/category/law.png'></image>
+        <text>法律</text>
+      </view>
+      <view>
+        <image src='/images/category/civilengineering.png'></image>
+        <text>土建</text>
+      </view>
+    </view>
+  </view>
+</view>

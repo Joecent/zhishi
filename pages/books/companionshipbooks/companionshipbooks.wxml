@@ -1,0 +1,53 @@
+<!--pages/books/companionshipbooks/companionshipbooks.wxml-->
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="container">
+  <!--搜索列表-->
+    <view class='classification'>
+      <!--搜索-->
+      <view class='fixed'>
+        <view class='search'>
+          <image src='/images/public/search.png'></image>
+          <input type='text' name='keywords' placeholder='搜TA的书' bindinput="searchitemInput"></input>
+        </view>
+      </view>
+      <view class='outside productalone'>
+        <view class='product'>
+          <view class='position'>
+            <image src='{{sellerInfo.avatar_url}}' class='acvter'></image>
+            <text class='sharer_name'>{{sellerInfo.name}}</text>
+            <image src='{{sellerInfo.gender == "male" ? "/images/index/male.png" : "/images/index/female.png" }}' class='acvter_nv' wx:if='{{sellerInfo.gender !== ""}}'></image>
+            <image src='' class='acvter_nv' wx:else></image>
+            <text class='position_word'>{{sellerInfo.dist}}</text>
+            <image src='/images/index/position.png' class='position_img'></image>
+          </view>
+        </view>
+      </view>
+      <view class='outside'>
+        <view class='product' wx:for="{{inquirylist}}" bindtap='bindbookdetails' data-share_uuid='{{item.share_uuid}}' data-share_uid='{{item.share_uid}}'>
+          <image src='{{item.small_image}}'></image>
+          <view class='book_det'>
+            <view class='book_name'>{{item.name}}</view>
+            <view class='book_introduce'>{{item.introduction}}</view>
+            <view class='book_press'>
+              <text class='press_name'>{{item.author}}/{{item.press}}</text>
+            </view>
+            <text class='press_price' wx:if='{{item.real_price == 0.01}}'>赠送</text> 
+            <text class='press_price' wx:else>￥{{item.real_price}}</text>
+          </view>
+        </view>
+      </view>
+      <view hidden='{{none}}' class='none'>没有搜到您要的书籍</view>
+      <view hidden="{{loadall}}" class="none">已加载全部</view>
+    </view>
+  </view>
+  <!--发布-->
+  <view class='released' bindtap='bindscancode' wx:if="{{mername == '我的书架'}}">
+    <image src='/images/public/released.png'></image>
+  </view> 
+  <!--分享-->
+  <button open-type="share">
+    <view class='release'>
+      <image src='/images/public/share.png'></image>
+    </view> 
+  </button>
+</form>

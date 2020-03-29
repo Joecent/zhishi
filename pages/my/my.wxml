@@ -1,0 +1,68 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+  <button open-type='getUserInfo'>授权登录</button>
+  <view class='editdata' bindtap='bindpersonal'>
+    <text class='name' wx:if='{{preview.name !== ""}}'>{{preview.name}}</text>
+    <text class='name' wx:else>{{name}}</text>
+    <text class='edit' wx:if='{{preview.userinfo.university !== ""}}'>{{preview.userinfo.university}}</text>
+    <text class='edit' wx:else>查看并编辑资料</text>
+    <!-- <image src='{{preview.avatarUrl}}' wx:if='{{preview.avatarUrl !== ""}}'></image> -->
+    <!-- <image src='{{avatarUrl}}' wx:else></image> -->
+    <image src='{{avatarUrl}}'></image>
+    <image src='/images/my/one.png' class='join'></image>
+  </view>
+  <view class='editoperation' bindtap='bindbalance'>
+    <text class='edit_l'>余额</text>
+    <text class='edit_r'>{{preview.money}}</text>
+    <image src='/images/my/one.png'></image>
+  </view>
+  <!-- <view class='editoperation'>
+    <text class='edit_l'>充值</text>
+    <text class='edit_r'></text>
+    <image src='/images/my/two.png'></image>
+  </view> -->
+  <!-- <view class='editoperation'>
+    <text class='edit_l'>提现</text>
+    <text class='edit_r'></text>
+    <image src='/images/my/three.png'></image>
+  </view> -->
+  <view class='editoperation' bindtap='bindeditcart'>
+    <text class='edit_l'>购物车</text>
+    <text class='edit_r'>{{preview.cart}}</text>
+    <image src='/images/public/cart_s.png'></image>
+  </view>
+  <view class='editoperation' bindtap='bindpublished'>
+    <text class='edit_l'>已发布</text>
+    <text class='edit_r'>{{preview.posted}}</text>
+    <image src='/images/my/four.png'></image>
+  </view>
+  <view class='editoperation' bindtap='bindalreadysold'>
+    <text class='edit_l'>已卖出</text>
+    <text class='edit_r'>{{preview.sold}}</text>
+    <image src='/images/my/five.png'></image>
+  </view>
+  <view class='editoperation' bindtap='bindalreadybought'>
+    <text class='edit_l'>已买到</text>
+    <text class='edit_r'>{{preview.bought}}</text>
+    <image src='/images/my/six.png'></image>
+  </view>
+  <view class='editoperation' bindtap='bindsetup'>
+    <text class='edit_l'>密码设置</text>
+    <text class='edit_r'></text>
+    <image src='/images/my/seven.png'></image>
+  </view>
+  <!-- <view class='editoperation'>
+    <text class='edit_l'>账户设置</text>
+    <text class='edit_r'></text>
+    <image src='/images/my/eight.png'></image>
+  </view> -->
+   <view class='editoperation' bindtap='bindabout'>
+    <text class='edit_l'>交易须知</text>
+    <text class='edit_r'></text>
+    <image src='/images/my/nine.png'></image>
+  </view> 
+  <!--发布-->
+  <!-- <view class='release' bindtap='bindrelease'>
+    <image src='/images/public/release.png'></image>
+  </view> -->
+</view>

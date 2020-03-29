@@ -1,0 +1,51 @@
+/* pages/books/evaluate/evaluate.wxss */
+.bookintroduction{
+  width: 100%;
+  height: auto;
+  margin-top: 10rpx;
+  padding: 10rpx;
+  font-size: 30rpx;
+}
+.bookintroduction .introduction_title{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30rpx;
+  font-size: 40rpx;
+}
+.bookintroduction .comment{
+  height: auto;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+}
+.bookintroduction .introduction_details{
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+  position: relative;
+  line-height: 40rpx;
+  color: #484848;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.bookintroduction .introduction_evaluate{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.bookintroduction .introduction_evaluate image{
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+  float: left;
+  border-radius: 60rpx;
+}
+.bookintroduction .introduction_evaluate text{
+  width: 80%;
+  display: block;
+  float: left;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+}

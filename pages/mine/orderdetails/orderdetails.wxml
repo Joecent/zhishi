@@ -1,0 +1,52 @@
+<!--pages/mine/orderdetails/orderdetails.wxml-->
+<view class="container">
+  <view class='title_name'>买家信息</view>
+  <view class='name_phone'>
+    <text>{{customer_addr.receiver}}</text>
+    <text class='phone' bindtap='bindmakePhoneCall' data-phone='{{customer_addr.phone}}'>{{customer_addr.phone}}</text>
+  </view>
+  <view class='location'>
+    <image src='/images/mine/location.png'></image>
+    <text>{{customer_addr.addr}}</text>
+    <text>{{customer_addr.detail}}</text>
+  </view>
+  <view class='details' wx:for='{{list}}'>
+    <image src='{{item.small_image}}'></image>
+    <view class='name_author'>
+      <text>{{item.name}}</text>
+      <!-- <text>俞洪敏</text> -->
+    </view>
+    <view class='number'>
+       <text>书架：{{item.shelf}}</text> 
+      <text>订单编号：{{details.uuid}}</text>
+    </view>
+    <text class='price'>￥{{item.unit_price}}</text>
+    <text class='num'>x{{item.count}}</text>
+  </view>
+  <view class='time_logistics' wx:if='{{details.trade_mode == "online"}}'>
+    <text>配送方式：{{item.express_code}}</text>
+    <button class='looklogistics' bindtap='bindlooklogistics' data-uuid='{{details.uuid}}'>查看物流</button>
+    <text>下单时间：{{details.create_time}}</text>
+  </view>
+  <view class='time_logistics' wx:else> 
+    <text>配送方式：无需物流</text>
+    <text>下单时间：{{details.create_time}}</text>
+  </view>
+  <view class='time_logistics'>
+    <view>商品总额<text class='price'>￥{{details.total_cost}}</text></view>
+    <view>快递费用<text class='free'></text><text class='price'>￥{{details.express_cost}}</text></view>
+  </view>
+  <view class='time_logistics'>
+    <text class='totel'>实际付款：<text>{{details.total_cost}}</text></text>
+  </view>
+  <view class='title_name m_top'>卖家信息</view>
+  <view class='name_phone'>
+    <text>{{seller_addr.receiver}}</text>
+    <text class='phone' hidden='{{ishide}}' bindtap='bindmakePhoneCall' data-phone='{{seller_addr.phone}}'>{{seller_addr.phone}}</text>
+  </view>
+  <view class='location' hidden='{{ishide}}'>
+    <image src='/images/mine/location.png'></image>
+    <text>{{seller_addr.addr}}</text>
+    <text>{{seller_addr.detail}}</text>
+  </view>
+</view>

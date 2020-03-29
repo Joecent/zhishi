@@ -1,0 +1,116 @@
+<!--pages/my/sold/sold.wxml-->
+<view class="container">
+    <!--选项卡-->
+    <view class='sfds'>
+      <view class="swiper-tab">  
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待发货</view>  
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已发货</view>  
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已完成</view>
+        <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">退款</view>  
+      </view>  
+    </view>
+    <swiper current="{{currentTab}}" class="swiper-box" style="height:{{winHeight}}px" duration="300" bindchange="bindChange">  
+      <!-- 待发货列表 -->  
+      <swiper-item>  
+        <view class='classification'>
+          <view class='outside'>
+            <view class='product' wx:for="{{inquirylist}}">
+              <view class='book_details' data-order_uuid="{{item.order_uuid}}" bindtap='bindlogistics' wx:for="{{item.goods}}" wx:for-item="goods">
+                <image src='{{goods.small_image}}'></image>
+                <view class='book_det'>
+                  <view class='book_name'>{{goods.book_name}}</view>
+                  <view class='book_press'>
+                    <text class='press_name'>订单编号：{{item.order_uuid}}</text>
+                    <text class='press_name'>书架：{{item.shelf}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='book_operation'>
+                <view class='book_pay' bindtap='bindConsignment' data-order_uuid="{{item.order_uuid}}" data-trade_mode="{{item.trade_mode}}"><image src='/images/my/delivergoods.png'></image>发货</view>
+                <view class='book_pay book_pay_refund' bindtap='bindcancel' data-order_uuid="{{item.order_uuid}}"><image src='/images/my/cancel.png'></image>取消订单</view>
+                <view class='book_num_price'><text>共{{item.total_count}}件商品</text>￥{{item.total_cost}}</view>
+              </view>
+            </view>
+          </view>
+          <view hidden='{{none}}' class='none'>无待发货书籍</view>
+          <view hidden="{{loadall}}" class="none">已加载全部</view>
+        </view>
+      </swiper-item> 
+      <!-- 已发货列表 -->  
+      <swiper-item>  
+        <view class='classification'>
+          <view class='outside'>
+            <view class='product' wx:for="{{inquirylist}}">
+              <view class='book_details' data-order_uuid="{{item.order_uuid}}" bindtap='bindlogistics' wx:for="{{item.goods}}" wx:for-item="goods">
+                <image src='{{goods.small_image}}'></image>
+                <view class='book_det'>
+                  <view class='book_name'>{{goods.book_name}}</view>
+                  <view class='book_press'>
+                    <text class='press_name'>订单编号：{{item.order_uuid}}</text>
+                    <text class='press_name'>书架：{{item.shelf}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='book_operation'>
+                <view class='book_num_price'><text>共{{item.total_count}}件商品</text>￥{{item.total_cost}}</view>
+              </view>
+            </view>
+          </view>
+          <view hidden='{{none}}' class='none'>无已发货书籍</view>
+          <view hidden="{{loadall}}" class="none">已加载全部</view>
+        </view>
+      </swiper-item> 
+      <!-- 已完成列表 -->  
+      <swiper-item>  
+        <view class='classification'>
+          <view class='outside'>
+            <view class='product' wx:for="{{inquirylist}}">
+              <view class='book_details' data-order_uuid="{{item.order_uuid}}" bindtap='bindlogistics' wx:for="{{item.goods}}" wx:for-item="goods">
+                <image src='{{goods.small_image}}'></image>
+                <view class='book_det'>
+                  <view class='book_name'>{{goods.book_name}}</view>
+                  <view class='book_press'>
+                    <text class='press_name'>订单编号：{{item.order_uuid}}</text>
+                    <text class='press_name'>书架：{{item.shelf}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='book_operation'>
+                <view class='book_num_price'><text>共{{item.total_count}}件商品</text>￥{{item.total_cost}}</view>
+              </view>
+            </view>
+          </view>
+          <view hidden='{{none}}' class='none'>无已完成书籍</view>
+          <view hidden="{{loadall}}" class="none">已加载全部</view>
+        </view>
+      </swiper-item>
+      <!-- 退款列表 -->  
+      <swiper-item>  
+        <view class='classification'>
+          <view class='outside'>
+            <view class='product' wx:for="{{inquirylist}}">
+              <view class='book_details' data-order_uuid="{{item.order_uuid}}" bindtap='bindlogistics' wx:for="{{item.goods}}" wx:for-item="goods">
+                <image src='{{goods.small_image}}'></image>
+                <view class='book_det'>
+                  <view class='book_name'>{{goods.book_name}}</view>
+                  <view class='book_press'>
+                    <text class='press_name'>订单编号：{{item.order_uuid}}</text>
+                    <text class='press_name'>书架：{{item.shelf}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='book_operation'>
+                <view class='book_pay' bindtap='bindagreerefund' data-order_uuid="{{item.order_uuid}}" wx:if='{{item.refund_status == "apply"}}'><image src='/images/my/approvalrefund.png'></image>同意退款</view>
+                <view class='book_pay' wx:if='{{item.refund_status == "approve"}}'><image src='/images/my/approvalrefund.png'></image>已同意</view>
+                <view class='book_pay book_pay_refund' bindtap='bindrefuserefund' data-order_uuid="{{item.order_uuid}}" wx:if='{{item.refund_status == "apply"}}'><image src='/images/my/refusing.png'></image>拒绝退款</view>
+                <view class='book_pay book_pay_refund' wx:if='{{item.refund_status == "reject"}}'><image src='/images/my/refusing.png'></image>已拒绝</view>
+                <view class='book_num_price'><text>共{{item.total_count}}件商品</text>￥{{item.total_cost}}</view>
+              </view>
+            </view>
+          </view>
+          <view hidden='{{none}}' class='none'>无退款书籍</view>
+          <view hidden="{{loadall}}" class="none">已加载全部</view>
+        </view>
+      </swiper-item> 
+    </swiper>
+</view>

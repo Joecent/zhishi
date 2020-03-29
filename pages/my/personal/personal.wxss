@@ -1,0 +1,130 @@
+/* pages/my/personal/personal.wxss */
+.editdata{
+  width: 100%;
+  height: auto;
+  padding: 50rpx 0;
+  font-size: 30rpx;
+  position: relative;
+  color: #484848;
+}
+.editdata text{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10rpx;
+}
+.editdata .name{
+  font-size: 40rpx;
+}
+.editdata image{
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  position: absolute;
+  top: 45rpx;
+  right: 0;
+  border-radius: 100rpx;
+}
+.editnews{
+  width: 100%;
+  height: auto;
+  padding: 40rpx 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.editnews .edittitle{
+  width: 100%;
+  height: auto;
+  font-size: 34rpx;
+  color: #484848;
+  margin-bottom: 35rpx;
+}
+.editnews .editinput{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.editnews .editinput image{
+  position: absolute;
+  top: 15rpx;
+  right: 0;
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+}
+.editnews .editinput input{
+  width: 90%;
+  height: auto;
+  font-size: 30rpx;
+  color: #484848;
+}
+.editnews .editinput textarea{
+  width: 95%;
+  height: 200rpx;
+  font-size: 28rpx;
+  color: #484848;
+  padding: 2.5%;
+  border: 1px solid #eeeeee;
+}
+.editaddree{
+  width: 100%;
+  height: auto;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+.editaddree .edittitle{
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+  color: #484848;
+}
+.editaddree .tiao{
+  position: absolute;
+  top: 32rpx;
+  right: 0;
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+}
+.radio-group{
+  font-size: 34rpx;
+}
+.radio-group .radio{
+  font-size: 32rpx;
+}
+radio{
+  transform:scale(.8);
+  margin-top:-5rpx;
+}
+.addnewaddress_fff{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+}
+.addnewaddress{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  background-color: #ff7f50;
+}
+.addnewaddress button{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  background-color: #ff7f50;
+}

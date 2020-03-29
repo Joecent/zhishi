@@ -1,0 +1,37 @@
+<!--pages/my/published/published.wxml-->
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="container">
+  <!--搜索列表-->
+    <view class='classification'>
+      <!--搜索-->
+      <view class='fixed'>
+        <view class='search'>
+          <image src='/images/public/search.png'></image>
+          <input type='text' name='name' value="{{keywords}}" placeholder='搜已发布的书' bindinput="searchitemInput"></input>
+        </view>
+      </view>
+      <!-- <view class='search'>
+        <input type='text' name='keywords' placeholder='请输入书籍名称或作者' bindinput="searchitemInput" auto-focus></input>
+      </view> -->
+      <view class='outside productalone'>
+         <view class='product' wx:for="{{inquirylist}}"> 
+          <image src='{{item.image}}' bindtap='bindbookdetails' data-uuid='{{item.share_uuid}}'></image>
+          <view class='book_det'>
+            <view class='book_name' bindtap='bindbookdetails' data-uuid='{{item.share_uuid}}'>{{item.name}}</view>
+            <view class='book_press' bindtap='bindbookdetails' data-uuid='{{item.share_uuid}}'>
+              <text class='press_price'>￥{{item.real_price}}</text>
+              <text class='press_price_y'>￥{{item.init_price}}</text>  
+              <text class='stock'>库存 {{item.stock}} 本</text>  
+            </view>
+            <view class='book_press'>
+              <text class='cancel' bindtap='bindcancelshare' data-uuid='{{item.share_uuid}}'>取消分享</text>
+              <text class='stock' bindtap='bindbookdetails' data-uuid='{{item.share_uuid}}'>书架：{{item.remark}}</text>  
+            </view>
+          </view>
+        </view>
+      </view>
+      <view hidden='{{none}}' class='none'>无已发布书籍</view>
+      <view hidden="{{loadall}}" class="none">已加载全部</view>
+    </view>
+  </view>
+</form>

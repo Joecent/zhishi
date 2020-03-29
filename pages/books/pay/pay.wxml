@@ -1,0 +1,2 @@
+<!--pages/books/pay/pay.wxml-->
+<button type='submit' bindtap='bindsubmit'>支付</button>

@@ -1,0 +1,8 @@
+<!--pages/mine/looklogistics/looklogistics.wxml-->
+<view class="container">
+  <view class='logistics' wx:for='{{list}}'>
+    <text class='dian'>•</text>
+    <text>{{item.context}}</text>
+    <view class='time'>{{item.time}}</view>
+  </view>
+</view>

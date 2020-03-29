@@ -1,0 +1,24 @@
+/* pages/release/upload/upload.wxss */
+.release_title{
+  width: 100%;
+  height: auto;
+  font-size: 40rpx;
+  padding: 30rpx 0;
+}
+.upload_word{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  padding-bottom: 30rpx;
+}
+.upload_domain{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 40rpx;
+  background-color: #ff7f50;
+  border-radius: 10rpx;
+}

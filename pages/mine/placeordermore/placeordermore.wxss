@@ -1,0 +1,260 @@
+/* pages/mine/placeordermore/placeordermore.wxss */
+.title_name{
+  width: 100%;
+  height: auto;
+  font-size: 36rpx;
+  color: #484848;
+  margin-bottom: 30rpx;
+}
+.name_phone{
+  width: 100%;
+  height: auto;
+  font-size: 32rpx;
+  color: #484848;
+  margin-bottom: 40rpx;
+  overflow: hidden;
+}
+.name_phone text{
+  float: left;
+  margin-right: 10rpx;
+  width: 100rpx;
+  height: auto;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+}
+.name_phone .province_city{
+  float: right;
+  color:#787878;
+  width: 160rpx;
+  height: auto;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+}
+.name_phone .province_details{
+  float: right;
+  color:#787878;
+  width: 400rpx;
+  height: auto;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+  margin-right: 0;
+}
+.name_phone .phone{
+  color: #6c98dd;
+  width: 300rpx;
+}
+.name_phone image{
+  width: 37rpx;
+  height: 37rpx;
+  display: block;
+  float: right;
+  margin-top: 5rpx;
+}
+.name_phone .location_image{
+  width:26rpx;
+  height:32rpx;
+  display: block;
+  float: right;
+  margin-top: 6rpx;
+  margin-right: 20rpx;
+}
+.location{
+  width: 100%;
+  height: auto;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+}
+.locationline{
+  width:110%;
+  height: 20rpx;
+  background-color: #f9f9f9;
+  position: absolute;
+  bottom: 0;
+  left:-5%;
+}
+.location image{
+  width: 26rpx;
+  height: 32rpx;
+  display: block;
+  float: left;
+  margin-right: 20rpx;
+  margin-top: 6rpx;
+}
+.location text{
+  width: 40%;
+  float: left;
+  font-size: 30rpx;
+  color: #787878;
+  margin-right: 20rpx;
+}
+.detailslist{
+  width: 100%;  
+  position: relative;
+}
+.details{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 40rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+.details image{
+  width: 138rpx;
+  height: 184rpx;
+  display: block;
+  float: left;
+  margin-right: 20rpx;
+}
+.details .name_author{
+  width: 60%;
+  height: auto;
+  float: left;
+  font-size: 30rpx;
+}
+.details .name_author .author{
+  width: 300rpx;
+  height: auto;
+  float: left;
+  font-size: 30rpx;
+  position: absolute;
+  bottom: 40rpx;
+  left: 158rpx;
+  color:#a2b3ce;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+}
+.details .name_author text{
+  width: 100%;
+  height: auto;
+  float: left;
+  font-size: 30rpx;
+   overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.details .number{
+  position: absolute;
+  bottom: 20rpx;
+  left: 158rpx;
+  width: 78%;
+  height: auto;
+  float: left;
+  font-size: 24rpx;
+}
+.details .number text{
+  margin-right: 40rpx;
+}
+.details .price{
+  position: absolute;
+  top: 40rpx;
+  right: 0;
+  font-size: 28rpx;
+  color: #ed7a50;
+}
+.details .num{
+  position:absolute;
+  top:140rpx;
+  right:0;
+  line-height:60rpx;
+  font-size:30rpx;
+}
+.details .num text{
+  font-size: 50rpx;
+  float: left;
+}
+.details .num input{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #ed7a50;
+  display: block;
+  float: left;
+}
+.time_logistics{
+  width: 100%;
+  height: auto;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.time_logistics .price{
+  color: #ed7a50;
+}
+.time_logistics .free{
+  margin-right: 140rpx;
+  color: #787878;
+}
+.time_logistics text{
+  width: 100%;
+  height: auto;
+  display: block;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.time_logistics view{
+  width: 100%;
+  height: auto;
+  display: block;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  position: relative;
+}
+.time_logistics view text{
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0;
+}
+.time_logistics .totel{
+  text-align: right;
+  font-size: 32rpx;
+}
+.time_logistics .totel text{
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  color: #ed7a50;
+  display: inherit;
+  font-size: 32rpx;
+}
+.m_top{
+  margin-top: 30rpx;
+}
+.total{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  color: #484848;
+}
+.total text{
+ float: right;
+}
+.total .price{
+  color: #ed7a50;
+}
+.total button{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #ed7a50;
+  color: #fff;
+  font-size: 30rpx;
+  float: right;
+  margin-left: 40rpx;
+}

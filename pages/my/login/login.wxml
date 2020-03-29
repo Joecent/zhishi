@@ -1,0 +1,19 @@
+<!--pages/my/login/login.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <image src='/images/my/login.png'></image>
+    <view>
+      <input type='number' name='phone' value='{{tel}}' placeholder='请输入手机号' bindinput='bindtel'></input>
+    </view>
+    <view>
+      <input type='password' name='password' value='{{password}}' placeholder='请输入密码' bindinput='bindpassword'></input>
+    </view>
+    <view>
+      <button form-type='submit'>登录</button>
+    </view>
+    <view>
+      <view class='forget' bindtap='bindforget'>忘记密码?</view>
+      <!-- <view class='register' bindtap='bindregister'>立即注册</view> -->
+    </view>
+  </view>
+</form>

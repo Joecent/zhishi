@@ -1,0 +1,60 @@
+/* pages/my/codelogin/codelogin.wxss */
+page{
+  background-color: #f9f9f9;
+}
+image{
+  width: 220rpx;
+  height: 310rpx;
+  display: block;
+  margin: 30rpx auto;
+}
+view{
+  width: 100%;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+input{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #aaaaaa;
+  border-bottom: 1px solid #dddddd;
+}
+.code{
+  width: auto;
+  background-color: #ff7f50;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+.hidden{
+  display: none;
+}
+button{
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+}
+.forget{
+  width: 50%;
+  height: auto;
+  float: left;
+  text-align: left;
+  font-size: 30rpx;
+  color: #ff7f50;
+  /* font-weight: bold; */
+}
+.register{
+  width: 50%;
+  height: auto;
+  float: left;
+  text-align: right;
+  font-size: 30rpx;
+  color: #ff7f50;
+  /* font-weight: bold; */
+}

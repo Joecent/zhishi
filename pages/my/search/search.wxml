@@ -1,0 +1,20 @@
+<!--pages/books/search/search.wxml-->
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="container">
+  <!--搜索列表-->
+    <view class='classification'>
+      <view class='search'>
+        <input type='text' name='keywords' placeholder='请输入学校名称' bindinput="searchitemInput" auto-focus></input>
+      </view>
+      <view class='outside'>
+        <view class='product' wx:for="{{inquirylist}}" bindtap='bindschoolname' data-id='{{item.id}}' data-name='{{item.name}}'>
+          <view class='book_det'>
+            <view class='book_name'>{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden='{{none}}' class='none'>没有搜到您要的学校</view>
+      <view hidden="{{loadall}}" class="none">已加载全部</view>
+    </view>
+  </view>
+</form>

@@ -1,0 +1,20 @@
+<!--pages/my/about/about.wxml-->
+<view class='container'>
+  <view class='abouttitle'>如何卖书？</view>
+  <view class='aboutdetails'>先完善个人信息，点击正下方“+”键，扫描书背面的ISBN码即可卖书。</view>
+  <view class='abouttitle'>书的价格如何确定？</view>
+  <view class='aboutdetails'>扫码成功后，卖家会获得该书的推荐售价（一般为市场价的3到4折），卖家可自行对售书价格做出小幅度调整。</view>
+  <view class='abouttitle'>如何知道书已被买走？</view>
+  <view class='aboutdetails'>在买家付款完成后卖家会收到手机短信通知。</view>
+  <view class='abouttitle'>买家如何退款？</view>
+  <view class='aboutdetails'>买家在卖家发货之前在已买到中点击申请退款，待卖家确认过后即可立即完成退款至余额，若卖家未确认，退款则会在3日后自动退还至买家余额。</view>
+  <view class='abouttitle'>物流规则？</view>
+  <view class='aboutdetails'>卖家在发布书籍时可选择配送方式：</view>
+  <view class='aboutdetails'>1.  送书上门（可设置最远送货距离，超出距离则需使用快递） </view>
+  <view class='aboutdetails'>2.  三公里内买家自取（默认最远距离为3公里，超出距离则需使用快递）</view>
+  <view class='abouttitle'>运费怎么算？</view>
+  <view class='aboutdetails'>运费由买家承担，默认一次性购买满68包邮（卖家可修改金额），邮费将按照根据双方距离所得出的市场价格为准。</view>
+  <view class='abouttitle'>卖家如何收到书款？</view>
+  <view class='aboutdetails'>在买家确认收货过后（若买家未确认，则付款完成7天之后将自动确认收货），卖家即可收到书款至余额（平台收取8%的手续费）。</view>
+</view>
+

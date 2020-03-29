@@ -1,0 +1,339 @@
+/**index.wxss**/
+.fixed{
+  width: 90%;
+  position: fixed;
+  top: 0;
+  left: 5%;
+  z-index: 9999;
+  background-color: #fff;
+}
+.gap{
+  width: 100%;
+  height: 166rpx;
+}
+.search{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  position: relative;
+}
+.search image{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+}
+.search input{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 10%;
+  font-size: 30rpx;
+}
+swiper{
+  width: 100%;
+  height: 150px;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.companionshipbooks{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+.companionshipbooks .title{
+  width: 30%;
+  height: 100rpx;
+  float: left;
+}
+.companionshipbooks .books_url{
+  width: 70%;
+  height: 100rpx;
+  float: left;
+}
+.companionshipbooks .books_url image{
+  width:50rpx;
+  height:50rpx;
+  display:block;
+  border-radius:40rpx;
+  margin-left:-10rpx;
+  margin-top: 25rpx;
+  float: left;
+}
+.companionshipbooks .xiayibu{
+  width:40rpx;
+  height:40rpx;
+  display:block;
+  position:absolute;
+  top:30rpx;
+  right:0;
+}
+.classification{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.classification .title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.classification .title .title_name{
+  font-size: 30rpx;
+  color: #484848;
+  float: left;
+}
+.classification .title .more{
+  font-size: 24rpx;
+  color: #767676;
+  float: right;
+}
+.classification .title .more image{
+  width: 13rpx;
+  height: 24rpx;
+  margin-left: 20rpx;
+}
+.classification .icon{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.classification .icon view{
+  width: 25%;
+  height: auto;
+  text-align: center;
+  margin: 20rpx 0;
+  float: left;
+}
+.classification .icon .line{
+  width: 100%;
+  height: 4rpx;
+  background-color: #eeeeee;
+  margin: 0;
+}
+.classification .icon view image{
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  margin: 0 auto;
+}
+.classification .icon view text{
+  width: 100%;
+  font-size: 26rpx;
+  display: block;
+  height: auto;
+  margin-top: 20rpx;
+  color: #666666;
+}
+.classification .outside{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.classification .cur{
+  width: 100%;
+  height: 680rpx;
+}
+.classification .none{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+.outside .product{
+  width: 100%;
+  padding: 50rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+}
+.outside .product image{
+  width: 138rpx;
+  height: 184rpx;
+  display: block;
+  float: left;
+}
+.outside .book_det{
+  float: left;
+  width: 76%;
+  margin-left: 20rpx;
+  position: relative;
+}
+@media screen and (max-width: 320px) {
+  .outside .book_det{
+    float: left;
+    width: 72%;
+    margin-left: 20rpx;
+    position: relative;
+  }
+}
+.outside .book_det .book_name{
+  font-size: 32rpx;
+  color: #484848;
+  margin-bottom: 15rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.outside .book_det .book_introduce{
+  font-size: 28rpx;
+  height: 80rpx;
+  color: #999999;
+  margin-bottom: 15rpx;
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.outside .book_det .book_press{
+  width: 380rpx;
+  height: auto;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.book_press text{
+  font-size: 28rpx;
+  margin-right: 5rpx;
+  float: left;
+}
+.book_press .press_name{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color: #a2b3ce;
+}
+.book_press .press_address{
+  color: #a2b3ce;
+}
+.press_price{
+  color: #ed7a50;
+  font-size: 28rpx;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.book_press .press_price_y{
+  color: #c4c4c4;
+  text-decoration:line-through; 
+}
+.classification .evenmore{
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+}
+.classification .evenmore image{
+  width: 26rpx;
+  height: 24rpx;
+  display: block;
+  margin: 0 auto;
+}
+.release{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+.release image{
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+.classification .cation{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.classification .cation .cation_name{
+  width: auto;
+  margin: 0 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 15rpx;
+  display: inline-block; 
+  background-color: #fff;
+  padding: 0 20rpx;
+  color: #646464;
+  border-radius: 20rpx;
+}
+.scroll-header{
+  /* display: flex; */
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 0;
+  border-bottom:1px solid #eeeeee;
+}
+.classification .cation .cation_select{
+  background-color:#eeeeee;
+  color: #ed7a50;
+}
+.position{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-bottom: 30rpx;
+  font-size: 27rpx;
+}
+.outside .product .position .acvter{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  border-radius: 40rpx;
+  margin-right: 10rpx;
+}
+.outside .product .position .acvter_nv{
+  width: 24rpx;
+  height: 24rpx;
+  display: block;
+  margin-right: 10rpx;
+  margin-top: 8rpx;
+}
+.outside .product .position .position_img{
+  width: 20rpx;
+  height: 20rpx;
+  display: block;
+  float: right;
+  margin-top: 11.5rpx;
+  margin-right: 10rpx;
+}
+.outside .product .position .position_word{
+  float: right; 
+}
+.sharer_name{
+  float: left;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+.load{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50rpx;
+  left: 0;
+  z-index: 9999;
+}
+.load image{
+  width:560rpx;
+  height:480rpx;
+  display: block;
+  z-index: 9999;
+  margin: 0 auto;
+}

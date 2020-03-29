@@ -1,0 +1,7 @@
+<!--pages/release/upload/upload.wxml-->
+<view class="container">
+  <view class='release_title'>资料上传</view>
+  <view class='upload_word'>确保您的手机和PC在同一局域网，上传资料过程中，请勿关闭此页面。</view>
+  <view class='upload_word'>在PC的浏览器中访问以下地址</view>
+  <view class='upload_domain'>http://192.168.0.111:18000</view>
+</view>

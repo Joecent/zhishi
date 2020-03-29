@@ -1,0 +1,65 @@
+<!--pages/mine/placeordermore/placeordermore.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class='title_name'>买家信息</view>
+    <view class='name_phone' hidden='{{editaddress !== ""}}' bindtap='bindmodifyaddress'>
+      <text style='width:400rpx;'>请选择或添加收货地址</text>
+      <image src='/images/mine/modify.png'></image>
+    </view>
+    <view class='name_phone' hidden='{{editaddress == ""}}' bindtap='bindmodifyaddress'>
+      <text>{{editaddress.receiver}}</text>
+      <text class='phone'>{{editaddress.phone}}</text>
+      <image src='/images/mine/modify.png'></image>
+    </view>
+    <view class='location' hidden='{{editaddress == ""}}' bindtap='bindmodifyaddress'>
+      <image src='/images/mine/location.png'></image>
+      <text>{{editaddress.addr}}</text>
+      <text>{{editaddress.detail}}</text>
+    </view>
+    <view class='detailslist' wx:for='{{list}}'>
+      <view class='details'>
+        <image src='{{item.small_image}}'></image>
+        <view class='name_author'>
+          <text>{{item.title}}</text>
+          <text class='author'>{{item.author}}</text>
+        </view>
+        <text class='price'>￥{{item.real_price}}</text>
+        <view class='num'>
+          <!-- <text bindtap='importCountjian' data-index="{{index}}">-</text> -->
+          <input type='number' name='count{{index}}' value='{{item.count}}' bindinput="importCount"  data-index="{{index}}" disabled='true'></input>
+          <!-- <text bindtap='importCountjia' data-index="{{index}}">+</text> -->
+        </view>
+      </view>
+      <!-- <view class='time_logistics'>
+        <text>配送方式：无需物流</text>
+        <text>下单时间：2017-10-31 11:48:12</text>
+      </view> -->
+      <view class='time_logistics'>
+        <view>商品总额<text class='price' data-index='{{index}}'>￥{{totalPriceunit[index]}}</text></view>
+        <view>
+          快递费用
+          <text class='free'></text>
+          <text class='price' wx:if='{{expresslist == ""}}'>￥0</text>
+          <text class='price' wx:else>￥{{expresslist[index]}}</text>
+        </view>
+      </view>
+      <!-- <view class='time_logistics'>
+        <text class='totel'>实际付款：<text>999.00</text></text>
+      </view> -->
+      <view class='title_name m_top'>卖家信息</view>
+      <view class='name_phone'>
+        <text>{{item.seller_detail.receiver}}</text>
+        <!-- <text class='phone'>13876645888</text> -->
+        <text class='province_details'>{{item.seller_detail.addr}}{{item.seller_detail.detail}}</text>
+        <!-- <text class='province_city'>{{item.seller_detail.province}}{{item.seller_detail.city}}</text> -->
+        <image src='/images/mine/location.png' class='location_image'></image>
+      </view>
+      <view class='locationline'></view>
+    </view>
+    <view class='total'>
+      <button form-type='submit'>提交订单</button>
+      <text class='price'>￥{{allPrice}}</text>
+      <text>合计：</text>
+    </view>
+  </view>
+</form>

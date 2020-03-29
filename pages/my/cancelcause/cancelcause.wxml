@@ -1,0 +1,19 @@
+<!--pages/my/cancelcause/cancelcause.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='container'>
+    <view class='mxbq'>
+      <view>
+        <label>
+          <textarea type='text' name='describe' bindinput='binddescribeinput' value='{{describe}}' placeholder='请填写您取消订单的原因'></textarea>
+          <view>
+            <text bindtap='binddescribe' data-item='{{item}}' wx:for='{{describelist}}'>{{item}}</text>
+          </view>
+        </label>
+      </view>
+    </view>
+    <view class='fqqrms'>
+      <view class='fq' bindtap='bindfangqi'>返回</view>
+      <button class='qrms' form-type='submit'>确认</button>
+    </view>
+  </view>
+</form>

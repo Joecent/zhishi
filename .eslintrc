@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "globals": {
+        "App": true,
+        "wx": true,
+        "Page": true,
+        "getApp": true
+    },
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "off",
+        "no-unused-vars": "warn"
+    }
+}

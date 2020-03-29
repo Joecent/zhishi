@@ -1,0 +1,106 @@
+<!--pages/books/bookdetails/bookdetails.wxml-->
+<!--轮播-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block>
+    <swiper-item>
+      <image src="{{detail.large_image}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--书籍详情-->
+<view class="container">
+  <!--书籍名称-->
+  <view class='details_title'>{{detail.name}}</view>
+  <!--书籍价格/出版社/销量-->
+  <view class='details_introduce'>
+    <view class='details_price'>
+      <text class='real_price' wx:if='{{detail.real_price == 0.01}}'>赠送</text>
+      <text class='real_price' wx:else>￥{{detail.real_price}}</text>
+      <text class='init_price'>￥{{detail.init_price}}</text>
+    </view>
+    <view class='details_press'>{{detail.author}} | {{detail.press}}</view>
+    <text class='details_num'>库存：{{detail.stock}}</text>
+  </view>
+  <!--选择分享者-->
+  <view class='details_share'>
+    <text>分享者</text>
+  </view>
+  <view class='share_new'>
+    <view class='share_name'>
+      <view class='name'>{{detail.sharer}}</view>
+      <view class='school'>{{detail.university}}</view> 
+      <view class='description'>{{detail.description}}</view>
+    </view>
+    <!-- <view class='line' wx:if="{{detail.mark !== '0.0'}}"></view> -->
+    <view class='share_portrait'>
+      <!-- <text wx:if="{{detail.mark !== '0.0'}}">{{detail.mark}}</text> -->
+      <image src='{{detail.avatar_url}}'></image>
+    </view>
+  </view>
+  <view class='share_new' style='border-bottom:none;padding-bottom:0;'>
+    <view class='share_name' style='width:100%;'>
+      <view class='description' style='margin-top:10rpx;color:#bfbfbf;' wx:if='{{detail.exp_strategy == 1}}'>规则：{{detail.free_radius}}公里内送书上门 #快递：满{{detail.free_amount}}包邮</view>
+      <view class='description' style='margin-top:10rpx;color:#bfbfbf;' wx:else>规则：3公里内自取 #快递：满{{detail.free_amount}}包邮</view>
+    </view>
+  </view>
+  <!--书籍简介-->
+  <view class='bookintroduction'>
+    <view class='introduction_title'>书籍简介</view>
+    <view class='introduction_details {{introductionmore}}' wx:if="{{detail.introduction !== ''}}">{{detail.introduction}}</view>
+    <view class='introduction_details' wx:else>暂无简介</view>
+    <text class='introduction_more {{morenone}}' bindtap='bindintroductionmore' wx:if="{{detail.introduction !== ''}}"><text></text>查看全部</text><image src='/images/public/down.png' class='down {{morenone}}' bindtap='bindintroductionmore' wx:if="{{detail.introduction !== ''}}"></image>
+  </view>
+  <!--评价-->
+  <view wx:if="{{list.length == 0}}"></view>
+  <view class='bookintroduction' wx:else>
+    <view class='introduction_title'>书友评价</view>
+    <view>
+      <view wx:for="{{list}}">
+        <view class='introduction_evaluate'>
+          <image src='{{item.avatar_url}}'></image>
+          <text>{{item.name}}</text>
+          <text>{{item.create_date}}</text>
+        </view>
+        <view class='introduction_details comment'>{{item.comment}}</view>
+      </view>
+      <view class='evaluate' bindtap='bindevaluate' data-share_uid='{{share_uid}}'>
+        <text>阅读全部评价</text>
+        <text class='evaluate_num'>{{list.length}}人评价</text>
+      </view>
+    </view>
+  </view>
+  <!--该用户分享其他书籍-->
+  <view class='classification'>
+    <view class='title' wx:if="{{other_share.length !== 0}}">
+      <view class='title_name'>该用户分享的其他书籍</view>
+    </view>
+    <view class='outside'>
+      <view class='product' wx:for="{{other_share}}" bindtap='bindbookdetails' data-share_uuid='{{item.share_uuid}}' data-share_uid='{{item.share_uid}}'>
+        <image src='{{item.small_image}}'></image>
+        <view class='book_det'>
+          <view class='book_name'>{{item.name}}</view>
+          <view class='book_introduce'>{{item.introduction}}</view>
+          <view class='book_press'>
+            <text class='press_name'>{{item.author}}/{{item.press}}</text>
+          </view>
+          <text class='press_price' wx:if='{{item.real_price == 0.01}}'>赠送</text> 
+          <text class='press_price' wx:else>￥{{item.real_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--加入购物车/立即购买-->
+  <view class='join_buy'>
+    <view class='details_index' style='border-right: 1px solid #eeeeee;' bindtap='bindindex'>
+      <image src='/images/public/home.png'></image>
+      <text>首页</text>
+    </view>
+    <view class='details_index' bindtap='bindcart'>
+      <image src='/images/public/cart.png'></image>
+      <text>购物车</text>
+    </view>
+    <view class='details_buy' bindtap='bindbuy' data-share_uid='{{share_uid}}' data-share_uuid='{{share_uuid}}'>立即购买</view>
+    <view class='details_join' bindtap='bindjoincart'>加入购物车</view>
+  </view>
+</view>

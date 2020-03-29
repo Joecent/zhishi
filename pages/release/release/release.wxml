@@ -1,0 +1,25 @@
+<!--pages/release/release/release.wxml-->
+<view class="container">
+  <view class='release_title'>书籍发布</view>
+  <view class='release_button release_bind'>
+    <view bindtap='bindscancode'>
+      <image src='/images/release/scancode.png'></image>
+      <text>扫书后条形码分享</text>
+    </view>
+  </view>
+  <!-- <view class='release_button'>
+    <view bindtap='bindrecovery'>
+      <image src='/images/release/recovery.png'></image>
+      <text>书籍上门回收</text>
+    </view>
+  </view> -->
+  <!-- <view class='upload_word'>目前可上门回收区域：</view>
+  <view class='upload_word'>
+    <text>上海交通大学</text> | 
+    <text>上海交通大学</text> | 
+    <text>上海交通大学</text> | 
+    <text>上海交通大学</text> | 
+    <text>上海交通大学</text> | 
+    <text>上海交通大学</text>
+  </view> -->
+</view>

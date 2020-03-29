@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='fixed'>
+    <!--搜索-->
+    <view class='search' bindtap='bindsearch'>
+      <image src='/images/public/search.png'></image>
+      <input type='text' placeholder='请输入书籍名称' disabled='true'></input>
+    </view>
+    <!--书籍分类-->
+    <scroll-view scroll-x class="scroll-header" scroll-left="{{scrollLeft}}">
+      <view class='classification'>
+        <view class='cation'>
+          <view class='cation_name {{currentItem==index?"cation_select":""}}' wx:for='{{cation}}' bindtap='bindcation' data-item='{{item}}' data-index='{{index}}'>{{item}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='gap'></view>
+  <!--轮播-->
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" hidden='{{image_hide}}'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--附近的书友-->
+  <view class='companionshipbooks' bindtap='bindcompanionship' hidden='{{image_hide}}'>
+    <view class='title'>附近的书友</view>
+    <view class='books_url'>
+      <image src='{{item.avatar_url}}' wx:for='{{companionship}}'></image>
+    </view>
+    <image src='/images/my/one.png' class='xiayibu'></image>
+  </view>
+  <!--书籍推荐-->
+  <view class='classification'>
+    <!--loading-->
+    <view class='load' hidden='{{load}}'>
+      <image src='/images/public/load.gif'></image>
+    </view>
+    <view class='outside' bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+      <view class='product' bindtap='bindbookdetails' wx:for='{{inquirylist}}' data-share_uuid='{{item.share_uuid}}' data-share_uid='{{item.share_uid}}'>
+        <view class='position'>
+          <image src='{{item.avatar_url}}' class='acvter'></image>
+          <text class='sharer_name'>{{item.sharer_name}}</text>
+          <image src='{{item.gender == "male" ? "/images/index/male.png" : "/images/index/female.png" }}' class='acvter_nv' wx:if='{{item.gender !== ""}}'></image>
+          <image src='' class='acvter_nv' wx:else></image>
+          <text class='position_word'>{{item.dist}}</text>
+          <image src='/images/index/position.png' class='position_img'></image>
+        </view>
+        <image src='{{item.small_image}}'></image>
+        <view class='book_det'>
+          <view class='book_name'>{{item.name}}</view>
+          <view class='book_introduce'>{{item.introduction}}</view>
+          <view class='book_press'>
+            <text class='press_name'>{{item.author}}/{{item.press}}</text>
+          </view>
+          <text class='press_price' wx:if='{{item.real_price == 0.01}}'>赠送</text> 
+          <text class='press_price' wx:else>￥{{item.real_price}}</text>
+        </view>
+      </view>
+    </view>
+    <view hidden='{{none}}' class='none'>没有您要的书籍</view>
+    <view hidden="{{loadall}}" class="none">已加载全部</view>
+  </view>
+  <!--发布-->
+  <!-- <view class='release' bindtap='bindrelease'>
+    <image src='/images/public/release.png'></image>
+  </view> -->
+</view>

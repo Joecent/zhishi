@@ -1,0 +1,62 @@
+<!--pages/release/details/details.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='container'>
+    <view class='product'>
+      <image src='{{list.small_image}}'></image>
+      <view class='book_det'>
+        <view class='book_name book_title'>{{list.name}}</view>
+        <view class='book_name'>{{list.press}}</view>
+        <view class='book_name'>{{list.isbn}}</view>
+        <view class='book_name book_price'>￥{{init_price}}</view>
+      </view>
+    </view>
+    <view class='parameter'>
+      <view>
+        <label>售价</label>
+        <input type='digit' name='price' value='{{recommend_price}}' style='width:60%;' placeholder='请输入书的售价' bindinput='bindprice'></input>
+        <text class='gifttuijian'>{{gifttuijian}}</text>
+        <text bindtap='bindgift' class='gift'>赠送</text>
+      </view>
+      <view>
+        <label>数量</label>
+        <input type='number' name='number' value='1' placeholder='请输入书的数量'></input>
+      </view>
+      <view>
+        <label>书架</label>
+        <input type='text' name='shelfnumber' placeholder='标记书所在的位置（选填）'></input>
+      </view>
+    </view>
+    <view class='mxbq'>
+      <view style="border-bottom:none;">
+        <label>
+          描述
+          <input type='text' name='describe' bindinput='binddescribeinput' value='{{describe}}' placeholder='说一说你爱书的状况吧~（选填）'></input>
+          <view>
+            <text bindtap='binddescribe' data-item='{{item}}' wx:for='{{describelist}}'>{{item}}</text>
+          </view>
+        </label>
+      </view>
+      <view>
+        <label>
+          分类
+          <view>
+            <text bindtap='bindlabel' class="{{currentItem==index?'active-tag':''}}" data-index='{{index}}' data-item='{{item}}' wx:for='{{labellist}}'>{{item}}</text>
+          </view>
+        </label>
+        <input type='text' name='label' bindinput='bindlabelinput' value='{{label}}' disabled='true' hidden='true'></input>
+      </view>
+      <view style='border-bottom:none;' bindtap='bindrule'>
+        <label>
+          卖书规则
+          <view class='cancelcause' wx:if='{{exp_strategy == 1}}'>#{{miles}}公里内送书上门 #快递满{{freeshipsh}}包邮</view>
+          <view class='cancelcause' wx:else>#3公里内自取 #快递满{{freeshipzq}}包邮</view>
+          <image src='/images/my/one.png' class='xiayibu'></image>
+        </label>
+      </view>
+    </view>
+    <view class='fqqrms'>
+      <view class='fq' bindtap='bindfangqi'>放弃</view>
+      <button class='qrms' form-type='submit'>确认卖书</button>
+    </view>
+  </view>
+</form>

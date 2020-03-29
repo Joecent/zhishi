@@ -1,0 +1,34 @@
+<!--pages/release/rule/rule.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='container'>
+    <view class='editnews'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          {{item.value}} <radio value="{{item.name}}" checked="{{item.checked}}"/>
+        </label>
+      </radio-group>
+    </view>
+    <view class='editnews' hidden='{{student}}'>
+      <view class='milesfreeship'>
+      <input type='number' name='miles' value='{{miles}}'></input>
+        <text>公里内送书上门</text>
+      </view>
+      <view class='milesfreeship'>
+        <text>快递满</text>
+        <input type='number' name='freeshipsh' value='{{freeshipsh}}'></input>
+        <text>包邮</text>
+      </view>
+    </view>
+    <view class='editnews' hidden='{{nostudent}}'>
+      <view class='milesfreeship'>
+        <text>快递满</text>
+        <input type='number' name='freeshipzq' value='{{freeshipzq}}'></input>
+        <text>包邮</text>
+      </view>
+    </view>
+    <view class='fqqrms'>
+      <view class='fq' bindtap='bindfangqi'>返回</view>
+      <button class='qrms' form-type='submit'>确认</button>
+    </view>
+  </view>
+</form>

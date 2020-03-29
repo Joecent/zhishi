@@ -1,0 +1,22 @@
+/* pages/my/balance/balance.wxss */
+.editoperation{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size:34rpx;
+  position: relative;
+}
+.editoperation .edit_l{
+  float: left;
+  color: #484848;
+}
+.editoperation image{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  position: absolute;
+  top: 35rpx;
+  right: 0;
+}

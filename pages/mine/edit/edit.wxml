@@ -1,0 +1,29 @@
+<!--pages/mine/edit/edit.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class='addaddress'>
+      <view class='addinput'>
+        <label>收货人</label>
+        <input type='text' name='receiver' value='{{editaddress.receiver}}' placeholder='请输入您的姓名'></input>
+      </view>
+      <view class='addinput'>
+        <label>联系电话</label>
+        <input type='number' name='phone' value='{{editaddress.phone}}' placeholder='请输入您的手机号码'></input>
+      </view>
+      <view class='addinput' bindtap="bindaddinput">
+        <label>所在地区</label>
+         <!-- <import src="../../../model/model.wxml"/> -->
+        <view class="infoText">{{address}}</view>
+        <image src='/images/my/one.png' class='tiao'></image>
+        <!-- <template is="areaData" data="{{...item}}"/>  -->
+      </view>
+      <view class='addinput'>
+        <label>详细地址</label>
+        <input type='text'  name='detail' value='{{editaddress.detail}}' placeholder='请输入您的详细地址'></input>
+      </view>
+    </view>
+    <view class='addnewaddress'>
+      <button form-type='submit'>保存</button>
+    </view>
+  </view>
+</form>

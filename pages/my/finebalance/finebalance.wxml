@@ -1,0 +1,15 @@
+<!--pages/my/finebalance/finebalance.wxml-->
+<view class="container">
+  <view class='fine' wx:for='{{inquirylist}}'>
+    <view class='balance'>
+      <text class='tixian'>{{item.remark}}</text>
+      <text class='tixian_money'>{{item.money}}</text>
+    </view>
+    <view class='balance'>
+      <text class='time'>{{item.create_time}}</text>
+      <text class='time_money'>{{item.money}}</text>
+    </view>
+  </view>
+  <view hidden='{{none}}' class='none'>无余额明细记录</view>
+  <view hidden="{{loadall}}" class="none">已加载全部</view>
+</view>

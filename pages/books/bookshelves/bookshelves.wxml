@@ -1,0 +1,53 @@
+<!--pages/books/bookshelves/bookshelves.wxml-->
+<view class="container">
+  <!--新书上架列表-->
+  <view class='classification'>
+    <view class='title'>
+      <view class='title_name'>新书上架</view>
+      <view class='search' bindtap='bindsearch'>
+        <image src='/images/public/search.png'></image>
+      </view>
+    </view>
+    <view class='outside'>
+      <view class='product'>
+        <image src='/images/public/product.png'></image>
+        <view class='book_det'>
+          <view class='book_name'>如果你曾奋不顾身爱上一个人</view>
+          <view class='book_introduce'>畅销女王苏小懒沉潜三年回归的全新巨作。与乔磊、温沈锐的感情故事……</view>
+          <view class='book_press'>
+            <text class='press_name'>苏小懒</text>
+            <text class='press_address'>湖南长沙三区出版社</text>
+            <text class='press_price'>￥13.12</text>
+            <text class='press_price_y'>￥32.80</text>
+          </view>
+        </view>
+      </view>
+      <view class='product'>
+        <image src='/images/public/product.png'></image>
+        <view class='book_det'>
+          <view class='book_name'>如果你曾奋不顾身爱上一个人</view>
+          <view class='book_introduce'>畅销女王苏小懒沉潜三年回归的全新巨作。与乔磊、温沈锐的感情故事……</view>
+          <view class='book_press'>
+            <text class='press_name'>苏小懒</text>
+            <text class='press_address'>湖南长沙三区出版社</text>
+            <text class='press_price'>￥13.12</text>
+            <text class='press_price_y'>￥32.80</text>
+          </view>
+        </view>
+      </view>
+      <view class='product'>
+        <image src='/images/public/product.png'></image>
+        <view class='book_det'>
+          <view class='book_name'>如果你曾奋不顾身爱上一个人</view>
+          <view class='book_introduce'>畅销女王苏小懒沉潜三年回归的全新巨作。与乔磊、温沈锐的感情故事……</view>
+          <view class='book_press'>
+            <text class='press_name'>苏小懒</text>
+            <text class='press_address'>湖南长沙三区出版社</text>
+            <text class='press_price'>￥13.12</text>
+            <text class='press_price_y'>￥32.80</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

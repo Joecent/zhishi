@@ -1,0 +1,88 @@
+/* pages/books/bookshelves/bookshelves.wxss */
+.classification{
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+}
+.classification .title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.classification .title .title_name{
+  font-size: 30rpx;
+  color: #484848;
+  float: left;
+}
+.classification .title .search{
+  float: right;
+}
+.classification .title .search image{
+  width:40rpx;
+  height:40rpx;
+  display:block;
+  margin-top: 10rpx;
+}
+.classification .outside{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.outside .product{
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+}
+.outside .product image{
+  width: 138rpx;
+  height: 184rpx;
+  display: block;
+  float: left;
+}
+.outside .book_det{
+  float: left;
+  width: 72%;
+  margin-left: 20rpx;
+}
+.outside .book_det .book_name{
+  font-size: 26rpx;
+  color: #484848;
+  margin-bottom: 10rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.outside .book_det .book_introduce{
+  font-size: 26rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.outside .book_det .book_press{
+  width: 100%;
+  height: auto;
+  overflow: hidden
+}
+.book_press text{
+  font-size: 22rpx;
+  margin-right: 5rpx;
+  float: left;
+}
+.book_press .press_name{
+  color: #a2b3ce;
+}
+.book_press .press_address{
+  color: #a2b3ce;
+}
+.book_press .press_price{
+  color: #ed7a50;
+}
+.book_press .press_price_y{
+  color: #c4c4c4;
+  text-decoration:line-through; 
+}

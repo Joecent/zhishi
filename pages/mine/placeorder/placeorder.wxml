@@ -1,0 +1,59 @@
+<!--pages/mine/placeorder/placeorder.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class='title_name'>买家信息</view>
+    <view class='name_phone' hidden='{{editaddress !== ""}}' bindtap='bindmodifyaddress'>
+      <text>请选择或添加收货地址</text>
+      <image src='/images/mine/modify.png'></image>
+    </view>
+    <view class='name_phone' hidden='{{editaddress == ""}}' bindtap='bindmodifyaddress'>
+      <text>{{editaddress.receiver}}</text>
+      <text class='phone'>{{editaddress.phone}}</text>
+      <image src='/images/mine/modify.png'></image>
+    </view>
+    <view class='location' hidden='{{editaddress == ""}}' bindtap='bindmodifyaddress'>
+      <image src='/images/mine/location.png'></image>
+      <text>{{editaddress.addr}}</text>
+      <text>{{editaddress.detail}}</text>
+    </view>
+    <view class='details'>
+      <image src='{{sharers.small_image}}'></image>
+      <view class='name_author'>
+        <text>{{sharers.name}}</text>
+        <text class='author'>{{sharers.author}}</text>
+      </view>
+      <text class='price'>{{sharers.real_price}}</text>
+      <view class='num'>
+        <text bindtap='importCountjian' class='{{count == 1 ? "noclick" : ""}}'>-</text>
+        <input type='number' value='{{count}}' bindinput='importCount'></input>
+        <text bindtap='importCountjia'>+</text>
+      </view>
+    </view>
+    <!-- <view class='time_logistics'>
+      <text>配送方式：无需物流</text>
+      <text>下单时间：2017-10-31 11:48:12</text>
+    </view> -->
+    <view class='time_logistics'>
+      <view>商品总额<text class='price'>￥{{totalPrice}}</text></view>
+      <view>快递费用<text class='free'></text><text class='price'>￥{{express}}</text></view>
+    </view>
+    <!-- <view class='time_logistics'>
+      <text class='totel'>实际付款：<text>999.00</text></text>
+    </view> -->
+    <view class='title_name m_top'>卖家信息</view>
+    <view class='name_phone'>
+      <text>{{sharers.address.receiver}}</text>
+      <!-- <text class='phone'>13876645888</text> -->
+    </view>
+    <view class='location'>
+      <image src='/images/mine/location.png'></image>
+      <text>{{sharers.address.addr}}</text>
+      <!-- <text>{{sharers.address.detail}}</text> -->
+    </view>
+    <view class='total'>
+      <button form-type='submit'>提交订单</button>
+      <text class='price'>￥{{totalPrice_express}}</text>
+      <text>合计：</text>
+    </view>
+  </view>
+</form>

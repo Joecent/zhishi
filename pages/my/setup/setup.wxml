@@ -1,0 +1,7 @@
+<!--pages/my/setup/setup.wxml-->
+<view class='container'>
+  <view class='editoperation' bindtap='modifysetup'>
+    <text class='edit_l'>登录密码</text>
+    <image src='/images/my/one.png'></image>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/books/companionship/companionship.wxml-->
+<view class="container">
+<!--附近的书友列表-->
+  <view class='classification'>
+    <view class='outside'>
+       <view class='product' wx:for="{{inquirylist}}" bindtap='bindbookdetails' data-uid='{{item.uid}}' data-gender='{{item.gender}}'>
+        <view class='position'>
+          <image src='{{item.avatar_url}}' class='acvter'></image>
+          <text class='sharer_name'>{{item.name}}</text>
+          <image src='{{item.gender == "male" ? "/images/index/male.png" : "/images/index/female.png" }}' class='acvter_nv' wx:if='{{item.gender !== ""}}'></image>
+          <image src='' class='acvter_nv' wx:else></image>
+          <text class='sharer_school'>{{item.university}}</text>
+          <text class='position_word'>{{item.dist}}</text>
+          <image src='/images/index/position.png' class='position_img'></image>
+        </view>
+      </view>
+    </view>
+    <view hidden='{{none}}' class='none'>无附近的书友</view>
+    <view hidden="{{loadall}}" class="none">已加载全部</view>
+  </view>
+</view>

@@ -1,0 +1,135 @@
+/* pages/books/companionship/companionship.wxss */
+.classification{
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+.classification .title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.classification .title .title_name{
+  font-size: 30rpx;
+  color: #484848;
+  float: left;
+}
+.classification .search{
+  width:90%;
+  height:auto;
+  border-bottom:1px solid #eeeeee;
+  position:fixed;
+  top:0;
+  left:5%;
+  z-index:9999;
+  background-color: #fff;
+}
+.classification .search input{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.classification .outside{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 0;
+}
+.classification .none{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+.outside .product{
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+}
+.outside .product image{
+  width: 138rpx;
+  height: 184rpx;
+  display: block;
+  float: left;
+}
+.book_press text{
+  font-size: 28rpx;
+  margin-right: 5rpx;
+  float: left;
+}
+.book_press .press_name{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color: #a2b3ce;
+}
+.book_press .press_address{
+  color: #a2b3ce;
+}
+.press_price{
+  color: #ed7a50;
+  font-size: 28rpx;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.book_press .press_price_y{
+  color: #c4c4c4;
+  text-decoration:line-through; 
+}
+.position{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 27rpx;
+}
+.outside .product .position .acvter{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  border-radius: 40rpx;
+  margin-right: 10rpx;
+  margin-top: 30rpx;
+}
+.outside .product .position .acvter_nv{
+  width: 24rpx;
+  height: 24rpx;
+  display: block;
+  margin-right: 10rpx;
+  margin-top: 38rpx;
+}
+.outside .product .position .position_img{
+  width: 20rpx;
+  height: 20rpx;
+  display: block;
+  float: right;
+  margin-top: 40rpx;
+  margin-right: 10rpx;
+}
+.outside .product .position .position_word{
+  float: right; 
+}
+.sharer_name{
+  width: 190rpx;
+  float: left;
+  margin-right: 10rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.sharer_school{
+  width: 230rpx;
+  float: left;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}

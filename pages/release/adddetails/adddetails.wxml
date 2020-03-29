@@ -1,0 +1,44 @@
+<!--pages/release/adddetails/adddetails.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='container'>
+    <view class='product'>
+      <view class='addphoto'>
+        <image src='/images/public/addphoto.png' bindtap='bindphoto' hidden='{{hidephoto}}'></image>
+        <image src='{{tempFilePaths}}' bindtap='bindphoto' hidden='{{showphoto}}'></image>
+        <view class='shuoming'>万分抱歉，数据库暂无该书籍信息，能动动手编辑一下嘛，谢谢亲！！！</view>
+      </view>
+    </view>
+    <view class='product product_top'>
+      <view class='book_det'>
+        <view class='book_name'>
+          <label>书名</label>
+          <input type='text' name='name' value='{{}}' placeholder='请输入书名'></input>
+        </view>
+        <view class='book_name'>
+          <label>作者</label>
+          <input type='text' name='author' value='{{}}' placeholder='请输入书的作者'></input>
+        </view>
+        <view class='book_name'>
+          <label>出版社</label>
+          <input type='text' name='press' value='{{}}' placeholder='请输入书的出版社'></input>
+        </view>
+        <view class='book_name'>
+          <label>原价</label>
+          <input type='digit' name='init_price' value='{{}}' placeholder='请输入书的原价'></input>
+        </view>
+        <view class='book_name'>
+          <label>ISBN</label>
+          <input type='number' name='isbn' value='{{isbn}}' placeholder='请输入书的ISBN'></input>
+        </view>
+        <view class='book_name'>
+          <label>简介</label>
+          <input type='text' name='introduction' value='{{}}' placeholder='请输入书籍简介（选填）'></input>
+        </view>
+      </view>
+    </view>
+    <view class='fqqrms'>
+      <view class='fq' bindtap='bindfangqi'>放弃</view>
+      <button class='qrms' form-type='submit'>下一步</button>
+    </view>
+  </view>
+</form>

@@ -1,0 +1,206 @@
+/* pages/my/alreadybought/alreadybought.wxss */
+.sfds{
+  width: 100%;
+  height: 60rpx;
+  background-color: #fff;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20rpx 0;
+}
+.swiper-tab{  
+  width: 70%;  
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid #eeeeee;  
+  text-align: center;  
+  border-radius: 40rpx;
+  font-size: 20rpx;
+  color: #484848;
+  background-color: #fff;
+  z-index: 9999;
+  margin: 0 auto;
+}  
+.swiper-tab-list{  
+  font-size: 30rpx;  
+  display: inline-block;  
+  width: 25%;   
+}  
+.on{ 
+  color: #ed7a50;
+}  
+.swiper-box{ 
+  display: block; 
+  width: 100%;
+  overflow: auto;
+  margin-top: 80rpx;
+}
+swiper-item{
+  overflow:auto;
+}
+.classification{
+  width: 100%;
+  height: auto;
+  overflow:auto;
+  margin-top: 20rpx;
+}
+.classification .title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.classification .title .title_name{
+  font-size: 30rpx;
+  color: #484848;
+  float: left;
+}
+.classification .search{
+ width: 100%;
+ height: auto;
+ border-bottom: 1px solid #eeeeee;
+}
+.classification .search input{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.classification .outside{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.classification .none{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+.outside .product{
+  width: 100%;
+  padding: 50rpx 0;
+  overflow: hidden;
+  position: relative;
+}
+.outside .product .delete{
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+  width: 28rpx;
+  height: 30rpx;
+  display: block;
+}
+.outside .product .book_details{
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.outside .book_operation{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 20rpx 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #ed7a50;
+  position: relative;
+}
+.outside .book_operation .book_pay{
+  width: auto;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  font-size: 26rpx;
+  float: left;
+  border: 1px solid #ed7a50;
+  border-radius: 10rpx;
+  padding-right: 10rpx;
+  margin-left: 10rpx;
+}
+.outside .book_operation .book_pay_refund{
+  border: 1px solid #c4c4c4;
+  color: #c4c4c4;
+}
+.outside .book_operation .book_pay image{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  float: left;
+  margin-top: 8rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.outside .book_operation .book_num_price{
+  width: auto;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+}
+.outside .book_operation .book_num_price text{
+  color: #484848;
+  margin-right: 20rpx;
+}
+.outside .product image{
+  width: 138rpx;
+  height: 184rpx;
+  display: block;
+  float: left;
+}
+.outside .book_det{
+  float: left;
+  width: 72%;
+  margin-left: 20rpx;
+}
+.outside .book_det .book_name{ 
+  font-size: 32rpx;
+  color: #484848;
+  margin-bottom: 15rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.outside .book_det .book_introduce{
+  font-size: 26rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.outside .book_det .book_press{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top:110rpx;
+}
+.book_press text{
+  font-size: 26rpx;
+  margin-right: 15rpx;
+  float: left;
+}
+.book_press .press_name{
+  color: #a2b3ce;
+}
+.book_press .press_address{
+  color: #a2b3ce;
+}
+.book_press .press_price{
+  color: #ed7a50;
+}
+.book_press .press_price_y{
+  color: #c4c4c4;
+  text-decoration:line-through; 
+}
+.timg{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin: 0 auto;
+}

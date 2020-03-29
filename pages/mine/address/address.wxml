@@ -1,0 +1,35 @@
+<!--pages/mine/address/address.wxml-->
+<view class="container">
+  <view class='address' wx:for='{{list}}' data-index='{{index}}'>
+    <view data-index='{{index}}' data-receiver='{{item.receiver}}' data-phone='{{item.phone}}' data-detail='{{item.detail}}' data-addr='{{item.addr}}' data-province='{{item.province}}' data-city='{{item.city}}' data-latitude='{{item.latitude}}' data-longitude='{{item.longitude}}' bindtap='bindaddreeChange'>
+      <view class='address_name_phone'>
+        <text>{{item.receiver}}</text>
+        <text>{{item.phone}}</text>
+      </view>
+      <view class='address_school'>
+        <text>{{item.addr}}{{item.detail}}</text>
+      </view>
+    </view>
+    <view class='address_operation'>
+      <radio-group class="radio-group" bindchange="radioChange" data-index='{{index}}' data-receiver='{{item.receiver}}' data-phone='{{item.phone}}' data-detail='{{item.detail}}' data-addr='{{item.addr}}' data-province='{{item.province}}' data-city='{{item.city}}' data-latitude='{{item.latitude}}' data-longitude='{{item.longitude}}'>
+        <label class="radio">
+          <radio checked="{{item.default}}"/>
+        </label>
+      </radio-group>
+      <text bindtap="bindradioChange" data-index='{{index}}' data-receiver='{{item.receiver}}' data-phone='{{item.phone}}' data-detail='{{item.detail}}' data-addr='{{item.addr}}' data-province='{{item.province}}' data-city='{{item.city}}' data-latitude='{{item.latitude}}' data-longitude='{{item.longitude}}' wx:if='{{item.default == true}}'>默认地址</text>
+      <text bindtap="bindradioChange" data-index='{{index}}' data-receiver='{{item.receiver}}' data-phone='{{item.phone}}' data-detail='{{item.detail}}' data-addr='{{item.addr}}' data-province='{{item.province}}' data-city='{{item.city}}' data-latitude='{{item.latitude}}' data-longitude='{{item.longitude}}' wx:else>设为默认</text>
+      <view class='edit' bindtap='bindedit' data-index='{{index}}' data-receiver='{{item.receiver}}' data-phone='{{item.phone}}' data-detail='{{item.detail}}' data-addr='{{item.addr}}' data-province='{{item.province}}' data-city='{{item.city}}' data-latitude='{{item.latitude}}' data-longitude='{{item.longitude}}'>
+        <image src='/images/address/edit.png'></image>
+        <text>编辑</text>
+      </view>
+      <view class='edit' bindtap='binddelete' data-index='{{index}}'>
+        <image src='/images/address/delete.png'></image>
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+  <view class='addnewaddress_fff'></view>
+  <view class='addnewaddress' bindtap='bindaddnewaddress'>
+    <text>添加新地址</text>
+  </view>
+</view>

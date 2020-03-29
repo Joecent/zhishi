@@ -1,0 +1,39 @@
+<!--pages/my/shipment/shipment.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='container'>
+    <view class='editdata'>
+      <text class='name'>收货人信息</text>
+    </view>
+    <view class='editnews'>
+      <view class='edittitle'>{{details.receiver}}</view>
+      <view class='edittitle'>{{details.province}}{{details.city}}{{details.detail}}</view>
+      <view class='edittitle'>{{details.phone}}</view>
+    </view>
+    <view class='editnews'>
+      <view class='edittitle'>填写快递单号</view>
+      <view class='editinput'>
+        <input type='text' name='courier' value='{{courier}}' placeholder='请扫一扫快递单号' disabled></input>
+        <image src='/images/my/cha.png' bindtap='binddeletecourier'></image>
+        <image src='/images/my/scancode.png' bindtap='bindscancode' class='scancode'></image>
+      </view>
+    </view>
+    <view class='editnews'>
+      <view class='edittitle'>选择物流公司</view>
+      <view class='editinput'>
+        <view class="section">
+          <input type='text' name='code' value='{{objectArray[index].code}}' hidden='true'></input>
+          <picker bindchange="bindPickerChange" value="{{objectArray[index].code}}" range="{{array}}">
+            <view class="picker">
+              {{objectArray[index].name}}
+            </view>
+          </picker>
+        </view>
+        <image src='/images/my/one.png'></image>
+      </view>
+    </view>
+    <!-- <view class='addnewaddress_fff'></view> -->
+    <view class='addnewaddress'>
+      <button form-type='submit'>确认发货</button>
+    </view>
+  </view>
+</form>

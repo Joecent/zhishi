@@ -1,0 +1,39 @@
+<!--pages/mine/cart/cart.wxml-->
+<view class='container'>
+  <view class='title_name'>书籍</view>
+  <view class="jiesuan-box select">
+    <view class="left-price">
+      <view class="all-selected  {{allSelect?'active':''}}" bindtap="bindAllSelect">全选</view>
+    </view>
+    <text class='length'>共{{list.length}}件</text>
+  </view>
+  <view class="goodsList">
+    <view class="a-gooods" wx:for="{{list}}">
+      <view class="a-goods-conts {{item.active? 'active':''}}" bindtouchstart="touchS" bindtouchend="touchE" data-index="{{index}}" style="{{item.left}}">
+        <view class='select_button' bindtap="selectTap" data-index="{{index}}"></view>
+        <view class='details'>
+          <image src='{{item.small_image}}'></image>
+          <view class='name_author'>
+            <text class='title_details'>{{item.title}}</text>
+            <text>{{item.introduction}}</text>
+          </view>
+          <text class='price'>￥{{item.real_price}}</text>
+          <input type='number' name="real_price{{index}}" value='{{item.real_price}}' bindinput="importPrice" data-index="{{index}}" hidden='true'/>
+          <view class='num'>
+            <text bindtap='importCountjian' data-index="{{index}}" class='{{item.count == 1 ? "noclick" : ""}}'>-</text>
+            <input type='number' name='count{{index}}' value='{{item.count}}' bindinput="importCount"  data-index="{{index}}"></input>
+            <text bindtap='importCountjia' data-index="{{index}}">+</text>
+          </view>
+        </view>
+        <view class="delete-btn" data-uuid="{{item.cart_uuid}}" data-index="{{index}}" catchtap="delItem">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class="jiesuan-box" style='border-bottom:none;'>
+    <view class="left-price">
+      <view class="all-selected  {{allSelect?'active':''}}" bindtap="bindAllSelect">全选</view>
+    </view>
+    <text class='total_price'>总额：<text class='total'>{{allPrice}}</text></text>
+    <view class="to-pay-btn {{noSelect?'no-select':''}}" hidden="{{!saveHidden}}" bindtap="toPayOrder">去结算</view>
+  </view>
+</view>

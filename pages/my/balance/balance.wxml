@@ -1,0 +1,11 @@
+<!--pages/my/balance/balance.wxml-->
+<view class='container'>
+  <view class='editoperation' bindtap='bindcash'>
+    <text class='edit_l'>提现</text>
+    <image src='/images/my/one.png'></image>
+  </view>
+  <view class='editoperation' bindtap='bindfinebalance'>
+    <text class='edit_l'>余额明细</text>
+    <image src='/images/my/one.png'></image>
+  </view>
+</view>
